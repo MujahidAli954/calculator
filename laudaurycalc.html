@@ -1,0 +1,286 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="HTTrack is an easy-to-use website mirror utility. It allows you to download a World Wide website from the Internet to a local directory,building recursively all structures, getting html, images, and other files from the server to your computer. Links are rebuiltrelatively so that you can freely browse to the local site (works with any browser). You can mirror several sites together so that you can jump from one toanother. You can, also, update an existing mirror site, or resume an interrupted download. The robot is fully configurable, with an integrated help" />
+	<meta name="keywords" content="httrack, HTTRACK, HTTrack, winhttrack, WINHTTRACK, WinHTTrack, offline browser, web mirror utility, aspirateur web, surf offline, web capture, www mirror utility, browse offline, local  site builder, website mirroring, aspirateur www, internet grabber, capture de site web, internet tool, hors connexion, unix, dos, windows 95, windows 98, solaris, ibm580, AIX 4.0, HTS, HTGet, web aspirator, web aspirateur, libre, GPL, GNU, free software" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<title>Local index - HTTrack Website Copier</title>
+  <!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
+	<style type="text/css">
+	<!--
+
+        .weigh-calculator{
+            margin-left: 30rem;
+            margin-top: 5rem;
+            background-color: orange;
+            
+        }
+        .weigh-calculator:hover{
+            background-color:rgb(121, 30, 98);
+            color: white;
+        }
+        .cloths-block {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom:1px solid #ccc; 
+    font-weight: 600;
+}
+.text-right {
+    text-align: right!important;
+}
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="card col-lg-6 col-md-12 col-12 weigh-calculator shadow rounded-lg" style="width:40rem"">
+        <div class="card-body  bg-gray p-30">
+            <h2 class="mb-0">Laundry Weight Estimator</h2>
+            <div class="pricing-modal" id="weigh_cal" role="dialog">
+                <form id="weight-calci-form">
+                    <div class="cloths-block weight-calculator">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0">Item</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center"> Weight <br />(Lbs)</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end">How <br />Many?</div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/jeans.png" alt="Jeans" title="Jeans"> Jeans</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="1.5"> 1.5</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select  weight="1.5" id="laundry_jeans_1" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/pants.png" alt="Pant" title="Pants"> Pants</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="1"> 1</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select weight="1" id="laundry_pants_2" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/shirts.png" alt="Shirts" title="Shirts"> Shirts</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="0.5"> 0.5</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select weight="0.5" id="laundry_shirts_3" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/t-shirts.png" alt="T-Shirts" title="T-Shirts"> T-Shirts</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="0.5"> 0.5</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select weight="0.5" id="laundry_tshirts_4" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/sweater.png" alt="Sweaters" title="Sweaters"> Sweaters</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="0.6"> 0.6</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select weight="0.6" id="laundry_sweater_5" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/towel.png" alt="Towels" title="Towels"> Towels</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="2"> 2</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select weight="2" id="laundry_towel_6" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/socks.png" alt="Socks" title="Socks"> Socks</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="0.3"> 0.3</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select weight="0.3" id="laundry_socks_7" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/sheet.png" alt="Bed Sheets" title="Bed Sheets"> Bed Sheets</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="1.5"> 1.5</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select weight="1.5" id="laundry_sheet_8" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block laundry-block">
+                        <div class="col-xl-5 col-lg-4 col-md-4 col-sm-4 col-5 pr-sm-3 pr-0"> <img src="https://wedolaundry.ca/user/themes/wedolaundry/images/cloths/underwears.png" alt="Underwear" title="Underwear"> Underwear</div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3 text-center product-weight" weight="0.3"> 0.3</div>
+                        <div class="col-xl-3 col-md-4 col-sm-4 col-4 d-flex flex-wrap justify-content-end"> <select  weight="0.3" id="laundry_underwears_9" class="product-quantity" onchange="calculate_weight();"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option> </select></div>
+                    </div>
+                    <div class="cloths-block">
+                        <div class="col-9">Total Weight (Approx.)</div>
+                        <div class="col-3 text-right total-weight pl-0" id="totalapproxiweight"> 40 Lbs</div>
+                    </div>
+                    <div class="cloths-block">
+                        <div class="col-12 estimate-label">
+                            <div class="wash-fold d-flex justify-content-between"><span>Separate wash and fold fee</span><span id="wash_and_fold_fee">$27.49</span></div>
+                            <div class="pickup-delivery d-flex justify-content-between"><span>Pickup fee</span><span id="deliveryfee">$27.49</span></div>
+                            <div class="service-fee d-flex justify-content-between"><span>Service Fee</span><span id="service_fee">$27.49</span></div>
+                            <div class="estimate d-flex justify-content-between hi"><span id="total_weight">Estimate (0 x $1.75)</span><p id="estimate_in_cost">$27.49</p></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        function calculate_weight() {
+           
+
+            //jeans
+         var jeans_quantity = document.getElementById("laundry_jeans_1").value;
+          
+         var single_jean_weight;
+          single_jean_weight= document.getElementById("laundry_jeans_1").getAttribute("weight");
+         
+          var total_jeans_weight =jeans_quantity *single_jean_weight;
+          Math.ceil( total_jeans_weight);
+        //   console.log("total jeans: "+total_jeans_weight); 
+
+          //pants
+
+          var pants_quantity = document.getElementById("laundry_pants_2").value;
+         
+         var single_pant_weight;
+          single_pant_weight= document.getElementById("laundry_pants_2").getAttribute("weight");
+         
+          var total_pants_weight =pants_quantity *single_pant_weight;
+
+          Math.ceil(  total_pants_weight);
+        //   console.log("total pants: "+total_pants_weight);
+
+          //shirts
+
+          var shirts_quantity = document.getElementById("laundry_shirts_3").value;
+         
+         var single_shirt_weight;
+          single_shirt_weight= document.getElementById("laundry_shirts_3").getAttribute("weight");
+         
+          var total_shirts_weight =shirts_quantity *single_shirt_weight;
+          Math.ceil( total_shirts_weight);
+        //   console.log("total shirts: "+total_shirts_weight);
+
+          //T-shirts.png" alt="
+
+          var tshirts_quantity = document.getElementById("laundry_tshirts_4").value;
+          console.log(tshirts_quantity);
+          var single_tshirt_weight;
+          single_tshirt_weight= document.getElementById("laundry_tshirts_4").getAttribute("weight");
+            console.log(single_tshirt_weight);
+            var total_tshirts_weight =tshirts_quantity *single_tshirt_weight;
+          console.log("total tshirt: "+total_tshirts_weight);
+          Math.ceil( total_tshirts_weight );
+
+          //sweater
+
+          var sweater_quantity = document.getElementById("laundry_sweater_5").value;
+          console.log(sweater_quantity);
+          var single_sweater_weight;
+          single_sweater_weight= document.getElementById("laundry_sweater_5").getAttribute("weight");
+            console.log(single_sweater_weight);
+            var total_sweater_weight =sweater_quantity *single_sweater_weight;
+          console.log("total seeaters: "+total_sweater_weight);
+
+          Math.ceil( total_sweater_weight );
+
+          //Towels
+          var towel_quantity = document.getElementById("laundry_towel_6").value;
+          console.log(towel_quantity);
+          var single_towel_weight;
+          single_towel_weight= document.getElementById("laundry_towel_6").getAttribute("weight");
+            console.log(single_towel_weight);
+            var total_towel_weight =towel_quantity *single_towel_weight;
+          console.log("total towel: "+total_towel_weight);
+
+          Math.ceil(total_towel_weight );
+          //socks
+          var socks_quantity = document.getElementById("laundry_socks_7").value;
+          console.log(socks_quantity);
+          var single_socks_weight;
+          single_socks_weight= document.getElementById("laundry_socks_7").getAttribute("weight");
+            console.log(single_socks_weight);
+            var total_socks_weight =socks_quantity *single_socks_weight;
+            Math.ceil(total_socks_weight );
+          console.log("total socks: "+total_socks_weight);
+
+          //bedsheets laundry_sheet_8
+          var sheet_quantity = document.getElementById("laundry_sheet_8").value;
+          console.log(sheet_quantity);
+          var single_sheet_weight;
+          single_sheet_weight= document.getElementById("laundry_sheet_8").getAttribute("weight");
+            console.log(single_sheet_weight);
+            var total_sheet_weight =sheet_quantity *single_sheet_weight;
+          console.log("total sheet: "+total_sheet_weight);
+          Math.ceil(total_sheet_weight);
+
+          //underware laundry_underwears_9
+          var underwears_quantity = document.getElementById("laundry_underwears_9").value;
+          console.log(underwears_quantity);
+          var single_underwears_weight;
+          single_underwears_weight= document.getElementById("laundry_underwears_9").getAttribute("weight");
+            console.log(single_underwears_weight);
+            var total_underwears_weight =underwears_quantity *single_underwears_weight;
+          console.log("total underwears: "+total_underwears_weight);
+          Math.ceil(total_underwears_weight);
+
+
+          let total_product_weight=0.00;
+            let wash_and_fold_fee =17.50 ;
+            let pickup_delivery_fee =9.99;
+            let service_fee =5;
+            let estimate_in_cost =27.49;
+
+           total_product_weight = total_jeans_weight + total_pants_weight+total_shirts_weight +
+                                  total_tshirts_weight+total_sweater_weight+total_towel_weight+
+                                  total_socks_weight + total_sheet_weight + total_underwears_weight;
+            console.log("total product weight :"+total_product_weight);
+            total_product_weight.toFixed(2);
+            document.getElementById("totalapproxiweight").innerHTML = " $" +total_product_weight.toFixed(2) ;
+            
+           
+
+            if(total_product_weight >=10){
+
+                // let total_weight= total_product_weight ;
+                
+                document.getElementById("deliveryfee").innerHTML = " $" +pickup_delivery_fee.toFixed(2) ;
+                
+                    
+               
+                wash_and_fold_fee = total_product_weight*1.75;
+                wash_and_fold_fee.toFixed(2);
+                document.getElementById("wash_and_fold_fee").innerHTML = " $" + wash_and_fold_fee.toFixed(2); ;
+                document.getElementById("total_weight").innerHTML = " Estimate (" +  total_product_weight.toFixed(2)  +" x $1.75)" ;
+                estimate_in_cost = wash_and_fold_fee + pickup_delivery_fee; 
+                estimate_in_cost.toFixed(2);
+
+                document.getElementById("estimate_in_cost").innerHTML = " $ "+  estimate_in_cost.toFixed(2) ;
+
+                if(total_product_weight>28){
+                    service_fee = Math.ceil(service_fee +((estimate_in_cost/100)* 5)) ;
+                    estimate_in_cost.toFixed(2);
+                document.getElementById("service_fee").innerHTML = " $" + service_fee;
+
+                estimate_in_cost =(estimate_in_cost + service_fee) - pickup_delivery_fee;
+                document.getElementById("total_weight").innerHTML = " Estimate (" +  total_product_weight.toFixed(2)  +" x $1.75)" ;
+                pickup_delivery_fee = 0;
+                document.getElementById("deliveryfee").innerHTML = " $" +pickup_delivery_fee ;
+                document.getElementById("estimate_in_cost").innerHTML = " $ "+  estimate_in_cost.toFixed(2) ;
+            }else{
+               
+                document.getElementById("service_fee").innerHTML = " $" + service_fee;
+                document.getElementById("deliveryfee").innerHTML = " $" +pickup_delivery_fee.toFixed(2) ;
+               
+                 estimate_in_cost = (total_product_weight*1.75) + deliveryfee; 
+                 estimate_in_cost.toFixed(2);
+                 document.getElementById("estimate_in_cost").innerHTML = " $ "+  estimate_in_cost.toFixed(2) ;
+            }
+               
+            }else{
+                total_product_weight = 27.49;
+                document.getElementById("total_weight").innerHTML = " Estimate (" +  total_product_weight.toFixed(2)  +" x $1.75)" ;
+            }
+            
+
+
+        }
+
+           
+
+
+        </script>
+       
+
+</body>
+
+</html>
+
